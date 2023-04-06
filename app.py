@@ -1,4 +1,5 @@
-!pip install scikit-learn
+import subprocess
+subprocess.call(['pip', 'install', 'scikit-learn'])
 
 import streamlit as st
 #from matplotlib import image
