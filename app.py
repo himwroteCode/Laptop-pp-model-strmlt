@@ -1,3 +1,5 @@
+!pip install scikit-learn
+
 import streamlit as st
 #from matplotlib import image
 import os
