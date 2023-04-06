@@ -1,5 +1,4 @@
 import streamlit as st
-#from matplotlib import image
 import os
 import time
 import pickle
@@ -11,9 +10,9 @@ st.set_page_config(page_title="AboutThisApp",
                    layout="wide" 
                    )
 
-# Set the file path to your laptop_details.csv file
-org_df = os.path.join("C:", "Jupyter", "innomatics RL", "laptop_details.csv")
-cleaned_df = os.path.join("C:", "Jupyter", "innomatics RL", "df2.csv")
+# Get the absolute path of the files
+org_df = os.path.abspath(os.path.join(os.path.dirname(__file__), "resources", "data", "laptop_details.csv"))
+cleaned_df = os.path.abspath(os.path.join(os.path.dirname(__file__), "resources", "data", "df2.csv"))
 
 # Load the laptop details data from the csv file
 laptop_details = pd.read_csv(org_df)
